@@ -1,0 +1,51 @@
+Check-Path:
+If
+  The current task status is `Check-Path'
+  The current location is <location>
+  Is the direction of <checked-west> checked?
+  Is the direction of <checked-north> checked?
+  Is the direction of <checked-east> checked?
+  Is the direction of <checked-south> checked?
+Then
+  Change the current task status to `Check-Direction'
+  Retrieval for unchecked directions using all variables
+
+Check-Direction:
+If
+  The current task status is `Check-Direction'
+  Retrieval for west?
+Then
+   Update the direction of movement to west
+   Change the current task status to `Move'
+
+Check-Direction:
+If
+  The current task status is `Check-Direction'
+  Retrieval for north?
+Then
+   Update the direction of movement to north
+   Change the current task status to `Move'
+
+Check-Direction:
+If
+  The current task status is `Check-Direction'
+  Retrieval for east?
+Then
+   Update the direction of movement to east
+   Change the current task status to `Move'
+
+Check-Direction:
+If
+  The current task status is `Check-Direction'
+  Retrieval for east?
+Then
+   Update the direction of movement to south
+   Change the current task status to `Move'
+
+Move:
+If 
+  The current task status is `Move'
+  Check <direction> of movement
+Then
+  The current location is <direction>
+  Change the current task status

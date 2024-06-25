@@ -1,0 +1,14 @@
+Retrieval-Direction:
+If
+  The current task status is `Retrieval-Direction'
+Then
+   Change the current task status to `Move'
+   Retrieval for directions
+
+Move:
+If 
+  The current task status is `Move'
+  Check <direction> of movement
+Then
+  The current location is <direction>
+  Change the current task status
