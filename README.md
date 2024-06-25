@@ -68,7 +68,7 @@ This file describes the main process for executing the ICM model. Please place t
 
 - execution example: python main.py
 
-## rule_example
+## rule_example directory
 This folder contains pseudo code for the rules of model movement. You can see the difference in the complexity of the rules and the number of variables used for pattern-matching.
 
 - random_model.txt
